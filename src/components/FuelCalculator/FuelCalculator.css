@@ -1,0 +1,76 @@
+/* FuelCalculator.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  column-gap: 10px;
+  margin-bottom: 15px; /* Ensure spacing between input fields */
+}
+
+.resultsTable {
+  margin-top: 20px;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Zebra striping for results and input parameters */
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Light gray for odd rows */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ffffff; /* White for even rows */
+}
+
+/* Additional styles for the input parameters table */
+h2 {
+  margin-top: 20px; /* Space above the input parameters table */
+}
+
+.currentTime {
+  margin-top: 10px; /* Space above the time display */
+  font-style: italic; /* Make time display italic for emphasis */
+}
+
+/* Button styles */
+button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}

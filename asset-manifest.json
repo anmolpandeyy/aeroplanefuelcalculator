@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/aeroplanefuelcalculator/static/css/main.a27e4758.css",
-    "main.js": "/aeroplanefuelcalculator/static/js/main.08ebb6f2.js",
+    "main.css": "/aeroplanefuelcalculator/static/css/main.0377d958.css",
+    "main.js": "/aeroplanefuelcalculator/static/js/main.5aac8f94.js",
     "static/js/453.39634023.chunk.js": "/aeroplanefuelcalculator/static/js/453.39634023.chunk.js",
     "static/media/logo.svg": "/aeroplanefuelcalculator/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/aeroplanefuelcalculator/index.html",
-    "main.a27e4758.css.map": "/aeroplanefuelcalculator/static/css/main.a27e4758.css.map",
-    "main.08ebb6f2.js.map": "/aeroplanefuelcalculator/static/js/main.08ebb6f2.js.map",
+    "main.0377d958.css.map": "/aeroplanefuelcalculator/static/css/main.0377d958.css.map",
+    "main.5aac8f94.js.map": "/aeroplanefuelcalculator/static/js/main.5aac8f94.js.map",
     "453.39634023.chunk.js.map": "/aeroplanefuelcalculator/static/js/453.39634023.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a27e4758.css",
-    "static/js/main.08ebb6f2.js"
+    "static/css/main.0377d958.css",
+    "static/js/main.5aac8f94.js"
   ]
 }

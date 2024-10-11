@@ -26,6 +26,10 @@
   margin-top: 20px;
 }
 
+.label {
+  text-align: left;
+}
+
 /* Table styles */
 table {
   width: 100%;

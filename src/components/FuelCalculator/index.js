@@ -5,7 +5,7 @@ import './FuelCalculator.css';
 const InputRow = ({ label, placeholder, value, onChange }) => {
   return (
     <div className='inputContainer'>
-      <p>{label}</p>
+      <p className='label'>{label}</p>
       <input
         type="number"
         placeholder={placeholder}

@@ -79,6 +79,13 @@ button:hover {
   background-color: #0056b3; /* Darker shade for hover effect */
 }
 
+/* Total row styling */
+.total-row {
+  font-weight: bold;
+  background-color: #e6f2ff !important; /* Light blue background */
+  border-top: 2px solid #007bff; /* Thicker top border */
+}
+
 input {
   /* Prevent zooming */
   font-size: 16px;

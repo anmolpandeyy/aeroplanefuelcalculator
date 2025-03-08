@@ -90,13 +90,13 @@ const FuelCalculator = () => {
 
     // Perform calculations
     const upliftKg = calculateUpliftInKg(upliftLitresNum, specificGravityNum);
-    const arrivalFuel = calculateTotalFuelOnboard(departureFuelNum, upliftKg);
-    const { leftTank, centerTank, rightTank } = distributeFuel(arrivalFuel);
+    const totalFuelOnboard = calculateTotalFuelOnboard(departureFuelNum, upliftKg);
+    const { leftTank, centerTank, rightTank } = distributeFuel(totalFuelOnboard);
 
     // Set results state
     setResults({
       upliftedFuel: upliftKg,
-      arrivalFuel,
+      arrivalFuel: totalFuelOnboard,
       departureFuel: departureFuelNum,
       leftTank,
       centerTank,
@@ -166,38 +166,51 @@ const FuelCalculator = () => {
             <thead>
               <tr>
                 <th>Tank</th>
-                <th>Arrival Fuel (kg)</th>
-                <th>Uplifted Fuel (kg)</th>
-                <th>Total Fuel (kg)</th>
+                <th>Fuel Distribution (kg)</th>
+                <th>Percentage</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Left</td>
-                <td>{results.leftTank}</td>
-                <td>{results.upliftedFuel}</td>
-                <td>{(results.leftTank + results.upliftedFuel + results.departureFuel)}</td>
+                <td>{results.leftTank.toFixed(2)}</td>
+                <td>{((results.leftTank / results.arrivalFuel) * 100).toFixed(2)}%</td>
               </tr>
               <tr>
                 <td>Center</td>
-                <td>{results.centerTank}</td>
-                <td>0</td>
-                <td>{(results.centerTank + results.departureFuel)}</td>
+                <td>{results.centerTank.toFixed(2)}</td>
+                <td>{((results.centerTank / results.arrivalFuel) * 100).toFixed(2)}%</td>
               </tr>
               <tr>
                 <td>Right</td>
-                <td>{results.rightTank}</td>
-                <td>{results.upliftedFuel}</td>
-                <td>{(results.rightTank + results.upliftedFuel + results.departureFuel)}</td>
+                <td>{results.rightTank.toFixed(2)}</td>
+                <td>{((results.rightTank / results.arrivalFuel) * 100).toFixed(2)}%</td>
               </tr>
-              <tr>
+              <tr className="total-row">
                 <td>Total</td>
-                <td>{(results.leftTank + results.centerTank + results.rightTank)}</td>
-                <td>{results.upliftedFuel}</td>
-                <td>{(results.departureFuel + results.upliftedFuel + results.leftTank + results.centerTank + results.rightTank)}</td>
+                <td>{results.arrivalFuel.toFixed(2)}</td>
+                <td>100%</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Fuel Summary</h3>
+          <table>
+            <tbody>
+              <tr>
+                <td>Departure Fuel (kg)</td>
+                <td>{results.departureFuel.toFixed(2)}</td>
               </tr>
               <tr>
-                <td colSpan="3">Coordinated Universal Time</td>
+                <td>Uplifted Fuel (kg)</td>
+                <td>{results.upliftedFuel.toFixed(2)}</td>
+              </tr>
+              <tr className="total-row">
+                <td>Total Fuel Onboard (kg)</td>
+                <td>{results.arrivalFuel.toFixed(2)}</td>
+              </tr>
+              <tr>
+                <td>Coordinated Universal Time</td>
                 <td>{results.utcTime}</td>
               </tr>
             </tbody>
